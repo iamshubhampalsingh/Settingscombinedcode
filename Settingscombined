@@ -1,0 +1,1143 @@
+########################################Settings04############################################################################
+n on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+
+if receiver_device.xpath('//*[@resource-id="com.android.systemui:id/mobile_group"]/android.widget.FrameLayout[1]').exists():
+    print("The mobile network is on")
+else:
+    print("The mobile network is not on")
+    
+#########################################Settings05###########################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+
+if receiver_device.xpath('//*[@resource-id="com.android.systemui:id/battery"]/android.widget.ImageView[1]').exists():
+    print("The battery percentage is visible")
+else:
+    print("The battery percentage is not visible")
+#####################################################Settings06############################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+
+if receiver_device.xpath('//*[@resource-id="com.android.systemui:id/battery"]/android.widget.ImageView[1]').exists():
+    print("The battery percentage is visible and charger is connected")
+else:
+    print("The battery percentage is not visible")
+###################################################Settings25#################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Network and internet").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="SIMs").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Mobile data").click()
+time.sleep(2)
+print("The mobile data is on for the device")
+
+#####################################################Settings28################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Network and internet").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Internet").click()
+time.sleep(10)
+
+if receiver_device(resourceId="android:id/title", text="Lava-5G-test").exists():
+    print("The internet services can be seen")
+
+else:
+    print("The internet services cant be seen")
+    
+################################################Settings30####################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Network and internet").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Internet").click()
+time.sleep(10)
+receiver_device.xpath('//*[@content-desc="Lava-5G-test,Connected,Wi-Fi two bars.,Secure network"]/android.widget.LinearLayout[2]').click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.toEnd()
+if receiver_device(resourceId="android:id/title", text="IP address").exists():
+    print("The IP address is present")
+else:
+    print("The IP address is not present")
+    
+#################################################Settings31##################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Network and internet").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Internet").click()
+time.sleep(10)
+if receiver_device(resourceId="android:id/title", text="Signal strength").exists():
+    print("we are in the wifi network page ")
+else:
+    print("Not in wifi network page")
+    
+######################################################Settings35###########################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Network and internet").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Internet").click()
+time.sleep(10)
+if receiver_device(resourceId="android:id/title", text="Signal strength").exists():
+    print("we are in the wifi network page ")
+else:
+    print("Not in wifi network page")
+
+######################################################Settings43############################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the package name and activity name of the Gmail app
+package_name = "com.google.android.gm"
+activity_name = "com.google.android.gm.ConversationListActivityGmail"
+
+# ADB command to start the Gmail app
+adb_command = ["adb", "-s", receiver_device_serial, "shell", "am", "start", "-n", f"{package_name}/{activity_name}"]
+
+# Execute the ADB command
+subprocess.run(adb_command)
+
+receiver_device(resourceId="com.google.android.gm:id/setup_addresses_add_another").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.gm:id/account_setup_label", text="Google").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="view_container"]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.TextView[2]').set_text("shubhampalsingh1993@gmail.com")
+time.sleep(2)
+receiver_device.xpath('//android.widget.EditText').set_text("ShubhaM@93")
+time.sleep(2)
+receiver_device(text="Next").click()
+time.sleep(2)
+receiver_device(text="I agree").click()
+time.sleep(2)
+receiver_device(text="Accept").click()
+
+############################################################Settings44########################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.161:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the package name and activity name of the Gmail app
+package_name = "com.google.android.gm"
+activity_name = "com.google.android.gm.ConversationListActivityGmail"
+
+# ADB command to start the Gmail app
+adb_command = ["adb", "-s", receiver_device_serial, "shell", "am", "start", "-n", f"{package_name}/{activity_name}"]
+
+# Execute the ADB command
+subprocess.run(adb_command)
+
+receiver_device(resourceId="com.google.android.gm:id/setup_addresses_add_another").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.gm:id/account_setup_label", text="Google").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="view_container"]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.TextView[2]').set_text("shubhampalsingh385@gmail.com")
+time.sleep(2)
+receiver_device.xpath('//android.widget.EditText').set_text("Shubham1993@")
+time.sleep(2)
+receiver_device(text="Next").click()
+time.sleep(2)
+receiver_device(text="I agree").click()
+time.sleep(2)
+receiver_device(text="Accept").click()
+
+#############################################################Settings49#######################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="Security")
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Screen lock").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.android.settings:id/lock_pin"]/android.widget.RelativeLayout[1]').click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line1_1"]/android.widget.LinearLayout[1]/android.widget.TextView[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="ABC").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="DEF").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="GHI").click()
+time.sleep(2)
+receiver_device(text="Next").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line1_1"]/android.widget.LinearLayout[1]/android.widget.TextView[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="ABC").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="DEF").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="GHI").click()
+time.sleep(2)
+receiver_device(text="Done").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+
+########################################################Settings53############################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="Security")
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Screen lock").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.android.settings:id/lock_pin"]/android.widget.RelativeLayout[1]').click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line1_1"]/android.widget.LinearLayout[1]/android.widget.TextView[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="ABC").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="DEF").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="GHI").click()
+time.sleep(2)
+receiver_device(text="Next").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line1_1"]/android.widget.LinearLayout[1]/android.widget.TextView[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="ABC").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="DEF").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="GHI").click()
+time.sleep(2)
+receiver_device(text="Done").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+##################################################Settings63################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+    # Locate the element by resource ID
+element = receiver_device(resourceId="com.android.systemui:id/center_group")
+
+# Perform a long press on the element
+element.long_click()
+print("The google assistant is working")
+
+############################################################Settngs66#########################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+
+    # Locate the element by resource ID
+element = receiver_device(resourceId="com.android.systemui:id/center_group")
+
+# Perform a long press on the element
+element.long_click()
+print("Please use your voice and ask question")
+
+################################################Settings72#####################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the package name and activity name of the Gmail app
+package_name = "com.google.android.gm"
+activity_name = "com.google.android.gm.ConversationListActivityGmail"
+
+# ADB command to start the Gmail app
+adb_command = ["adb", "-s", receiver_device_serial, "shell", "am", "start", "-n", f"{package_name}/{activity_name}"]
+
+# Execute the ADB command
+subprocess.run(adb_command)
+receiver_device.xpath('//*[@resource-id="com.android.settings:id/action_bar"]/android.view.View[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.gm:id/og_text_card_title", text="Add another account").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.gm:id/account_setup_label", text="Google").click()
+time.sleep(5)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line1_1"]/android.widget.LinearLayout[1]/android.widget.TextView[1]').click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="ABC").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.inputmethod.latin:id/0_resource_name_obfuscated", text="DEF").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_number_line2_1"]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]').click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.google.android.inputmethod.latin:id/key_pos_ime_action"]/android.widget.FrameLayout[1]').click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="view_container"]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.TextView[2]').set_text("shubhampalsingh385@gmail.com")
+time.sleep(2)
+receiver_device.xpath('//android.widget.EditText').set_text("Shubham1993@")
+time.sleep(2)
+receiver_device(text="I agree").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+
+######################################################Settings73################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Execute the ADB command
+subprocess.run(adb_command)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="Display")
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="Display size and text").click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.android.settings:id/recycler_view"]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]/android.widget.ImageView[1]').click()
+time.sleep(2)
+receiver_device.xpath('//*[@resource-id="com.android.settings:id/recycler_view"]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]/android.widget.ImageView[1]').click()
+time.sleep(2)
+print("The font size is changed with  settings")
+
+#####################################################Settings74################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Execute the ADB command
+subprocess.run(adb_command)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="Wallpaper")
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Wallpaper").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Wallpapers").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/action_bar_container").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/text1", text="Home screen and lock screen").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+############################################Settings81########################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Execute the ADB command
+subprocess.run(adb_command)
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/settings_button_container").click()
+time.sleep(2)
+receiver_device(scrollable=True).scroll.to(text="About phone")
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="About phone").click()
+time.sleep(2)
+if receiver_device(resourceId="android:id/summary", text="LAVA_LXX505_SW_V01_HW_V1.0_20230821").exists():
+    print("The version no is displayed correctly")
+else:
+    print("The version no is not displayed correctly")
+    
+#############################################settings84#######################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+if (receiver_device.xpath('//*[@resource-id="com.android.systemui:id/statusIcons"]/android.widget.FrameLayout[3]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]').click()).exists():
+    print("Sim 1 network is available")
+if (receiver_device.xpath('//*[@resource-id="com.android.systemui:id/statusIcons"]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]')).click()).exists():
+    print("Sim 2 network is not available")
+
+else:
+    print("The sim network is not available")
+
+    
+#######################################################Settings86############################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.systemui:id/recent_apps").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/center_group").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/back").click()
+print("all keys recent,center and back keys are working fine")
+
+#################################################Settings87#################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the package name and activity name of the Camera app
+package_name = "com.android.camera"
+activity_name = "com.android.camera.Camera"
+
+# ADB command to start the Camera app
+adb_command = ["adb", "-s", receiver_device_serial, "shell", "am", "start", "-n", f"{package_name}/{activity_name}"]
+
+receiver_device(resourceId="com.android.camera:id/shutter_button").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.camera:id/switch_camera_button").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.camera:id/shutter_button").click()
+time.sleep(2)
+receiver_device((resourceId="com.android.systemui:id/center_group").click()
+print("In camera module, back and front photo can be taken")
+                
+###############################################Settings89#####################################################################
+
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(resourceId="com.android.launcher3:id/folder_icon_name").click()
+time.sleep(2)
+receiver_device(text="Gmail").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/back").click()
+time.sleep(2)
+receiver_device(text="Maps").click()
+time.sleep(2)
+receiver_device(resourceId="com.android.systemui:id/back").click()
+time.sleep(2)
+print("The google setup is synced")
+                
+#############################################Settings90#######################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(text="Play Store").click()
+time.sleep(2)
+receiver_device(text="Search apps & games").set_text("linkedIn")
+time.sleep(2)
+receiver_device(description="LinkedIn: Jobs & Business NewsLinkedInBusinessKeep Learning with LinkedIn.Star rating: 4.140 MBRated for 12+Contains adsIn-app purchases").click()
+time.sleep(2)
+receiver_device(description="Install").click()
+time.sleep(2)
+print("App installation done on playstore")
+
+##################################################Settings91###################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+# Define the initial swipe coordinates
+start_x = 500
+start_y = 500
+end_y = 1500
+swipe_duration = 0.5
+
+# Perform multiple swipes to scroll the screen downwards
+num_swipes = 5  # Adjust the number of swipes as needed
+for _ in range(num_swipes):
+    receiver_device.swipe(start_x, start_y, start_x, end_y, duration=swipe_duration)
+    time.sleep(1)  # Adjust the delay between swipes if necessary
+receiver_device(resourceId="com.android.systemui:id/tile_label", text="Bluetooth").click()
+time.sleep(2)
+receiver_device(text="Off", description="Bluetooth.").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="Pair new device").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/title", text="OnePlus 9 Pro 5G").click()
+time.sleep(2)
+receiver_device(resourceId="android:id/button1").click()
+time.sleep(2)
+print("Bluetooth is connected")
+    
+#########################################Settings95##########################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(text="Phone").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_fab").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="*").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="#").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="0").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="6").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="#").click()
+time.sleep(2)
+ if receiver_device(receiver_device(resourceId="com.google.android.dialer:id/deviceid_hex_label", text="IMEI 1")).exists():
+        print("imei 1 displayed")
+else if receiver_device(resourceId="com.google.android.dialer:id/deviceid_hex_label", text="IMEI 2").exists():
+        print("imei 2 displayed")
+
+print("The imei is displayed here")
+                
+#########################################Settings96###########################################################################
+# Import necessary modules
+import uiautomator2 as ui2
+import time
+import subprocess
+
+# Device serial number of the receiver device
+receiver_device_serial = "192.168.2.72:5555"
+
+# Create a Device object for the sender device
+sender_device = ui2.Device('cf611ff9')
+
+# Create a Device object for the receiver device
+receiver_device = ui2.Device(receiver_device_serial)
+
+# ADB commands to turn on the receiver and sender devices' screens
+receiver_turn_on_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '224']
+sender_turn_on_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '224']
+
+# ADB commands to turn off the receiver and sender devices' screens
+receiver_turn_off_command = ['adb', '-s', receiver_device_serial, 'shell', 'input', 'keyevent', '26']
+sender_turn_off_command = ['adb', '-s', 'cf611ff9', 'shell', 'input', 'keyevent', '26']
+
+receiver_device(text="Phone").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_fab").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="*").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="#").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="0").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="7").click()
+time.sleep(2)
+receiver_device(resourceId="com.google.android.dialer:id/dialpad_key_number", text="#").click()
+time.sleep(2)
+print("Sar value is displayed")
